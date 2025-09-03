@@ -1,0 +1,52 @@
+{
+  "expo": {
+    "name": "Hockey Helper",
+    "slug": "hockey-helper",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.puckbuddy.hockeyhelper",
+      "infoPlist": {
+        "CFBundleURLTypes": [
+          {
+            "CFBundleURLName": "google-signin",
+            "CFBundleURLSchemes": ["454513180126-or4mhku8kdmlrdieuk26bi1frdgtagc1.apps.googleusercontent.com"]
+          }
+        ]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "package": "com.puckbuddy.hockeyhelper"
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      "@react-native-google-signin/google-signin"
+    ],
+    "scheme": "hockey-helper",
+    "extra": {
+      "eas": {
+        "projectId": "6a72cadb-455b-4c9a-a757-2d4b0eecccf4"
+      }
+    }
+  }
+}
