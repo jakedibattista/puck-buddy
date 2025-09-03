@@ -20,6 +20,6 @@
   },
   "then": {
     "type": "askAgent",
-    "prompt": "Source code files have been modified in this Expo React Native project. Please analyze the changes and determine if a deployment update is needed. If so, provide the appropriate commands to trigger a GitHub deployment or EAS update to keep the deployment in sync with the latest code changes. Consider whether this requires a full build or just an OTA update based on the nature of the changes."
+    "prompt": "Source code files have been modified in this Expo React Native project. Please analyze the changes and determine if a deployment update is needed. If so, provide the appropriate commands to trigger a GitHub deployment or EAS update to keep the deployment in sync with the latest code changes. Consider whether this requires a full build or just an OTA update based on the nature of the changes.\n\nThe repository name is: https://github.com/jakedibattista/puck-buddy"
   }
 }
