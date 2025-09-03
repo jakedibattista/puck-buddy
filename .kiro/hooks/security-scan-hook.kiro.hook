@@ -1,0 +1,32 @@
+{
+  "enabled": true,
+  "name": "Security Scan on Save",
+  "description": "Automatically reviews changed files for potential security issues including API keys, tokens, credentials, private keys, encryption keys, certificates, authentication tokens, session IDs, passwords, secrets in configuration files, IP addresses with sensitive data, hardcoded internal URLs, and database connection credentials. Provides specific security risk highlights, secure alternative approaches, and security best practice recommendations.",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "**/*.js",
+      "**/*.jsx",
+      "**/*.ts",
+      "**/*.tsx",
+      "**/*.json",
+      "**/*.env",
+      "**/*.config.js",
+      "**/*.config.ts",
+      "app.json",
+      "app.config.js",
+      "package.json",
+      "**/*.yml",
+      "**/*.yaml",
+      "**/*.xml",
+      "**/*.properties",
+      "**/*.ini",
+      "**/*.conf"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Review the changed files for potential security issues. For each file, scan for:\n\n1. API keys, tokens, or credentials in source code\n2. Private keys or sensitive credentials  \n3. Encryption keys or certificates\n4. Authentication tokens or session IDs\n5. Passwords or secrets in configuration files\n6. IP addresses containing sensitive data\n7. Hardcoded internal URLs\n8. Database connection credentials\n\nFor each security issue found:\n1. Highlight the specific security risk and explain why it's dangerous\n2. Suggest a secure alternative approach (environment variables, secure storage, etc.)\n3. Recommend relevant security best practices\n\nFocus on practical, actionable advice for this Expo React Native project. If no security issues are found, briefly confirm the files appear secure."
+  }
+}

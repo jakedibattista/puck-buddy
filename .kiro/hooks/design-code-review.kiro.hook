@@ -1,0 +1,31 @@
+{
+  "enabled": true,
+  "name": "Design & Code Review",
+  "description": "Monitors all design, interface, and code files for changes to trigger human review",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "app/**/*.tsx",
+      "app/**/*.ts",
+      "app/**/*.js",
+      "app/**/*.jsx",
+      "components/**/*.tsx",
+      "components/**/*.ts",
+      "components/**/*.js",
+      "components/**/*.jsx",
+      "styles/**/*.css",
+      "styles/**/*.scss",
+      "assets/**/*",
+      "constants/**/*.ts",
+      "constants/**/*.js",
+      "*.json",
+      "*.config.js",
+      "*.config.ts"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "Files have been modified that affect the design, interface, or code structure. Please review the changes and provide feedback on: 1) UI/UX design decisions, 2) Code quality and architecture, 3) Any potential issues or improvements needed. Focus on user experience, maintainability, and adherence to React Native/Expo best practices."
+  }
+}
